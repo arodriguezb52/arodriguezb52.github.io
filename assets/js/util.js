@@ -148,31 +148,27 @@
 
 					$this
 						.on('click', 'a', function(event) {
-
 							var $a = $(this),
 								href = $a.attr('href'),
 								target = $a.attr('target');
 
-							if (!href || href == '#' || href == '' || href == '#' + id)
+							if (!href || href == '#' || href == '' || href == '#' + id || $a.hasClass('view-button'))
 								return;
 
 							// Cancel original event.
-								event.preventDefault();
-								event.stopPropagation();
+							event.preventDefault();
+							event.stopPropagation();
 
 							// Hide panel.
-								$this._hide();
+							$this._hide();
 
 							// Redirect to href.
-								window.setTimeout(function() {
-
-									if (target == '_blank')
-										window.open(href);
-									else
-										window.location.href = href;
-
-								}, config.delay + 10);
-
+							window.setTimeout(function() {
+								if (target == '_blank')
+									window.open(href);
+								else
+									window.location.href = href;
+							}, config.delay);
 						});
 
 				}

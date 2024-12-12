@@ -2099,12 +2099,54 @@ input, select, textarea {
 				opacity: 1.0;
 			}
 
+<<<<<<< HEAD
 			.image.fit.thumb img {
 				width: 100%;
 				height: 200px; /* Adjust the height as needed */
 				object-fit: cover; /* This ensures the image covers the area without distortion */
 			}
 
+=======
+		.image img {
+			border-radius: 0.35em;
+			display: block;
+		}
+
+		.image.left {
+			float: left;
+			margin: 0 1.5em 1em 0;
+			top: 0.25em;
+		}
+
+		.image.right {
+			float: right;
+			margin: 0 0 1em 1.5em;
+			top: 0.25em;
+		}
+
+		.image.left, .image.right {
+			max-width: 40%;
+		}
+
+			.image.left img, .image.right img {
+				width: 100%;
+			}
+
+		.image.fit {
+			display: block;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+
+			.image.fit img {
+				width: 100%;
+			}
+
+		.image.avatar {
+			border-radius: 100%;
+		}
+
+>>>>>>> parent of a152165 (lastest commit (dec 11))
 			.image.avatar:before {
 				display: none;
 			}

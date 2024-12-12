@@ -3224,5 +3224,21 @@ input, select, textarea {
 				margin-left: 0;
 				padding-left: 0;
 			}
-
+	.view-button {
+		display: inline-block;
+		padding: 0.65em 1.0em;
+		margin-top: 1em;
+		background-color: #770000; /* Primary color */
+		color: #fff; /* Text color */
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px; /* Rounded corners */
+		transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+		}
+	.view-button:hover {
+		background-color: #0056b3; /* Darker shade on hover */
+		transform: translateY(-2px); /* Slight lift on hover */
+		box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+		}
 	}

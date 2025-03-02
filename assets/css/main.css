@@ -110,7 +110,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		border-bottom: none !important;
 		color: #000000;
 		text-decoration: none;
 	}
@@ -2560,24 +2560,36 @@ input, select, textarea {
 
 /* Work Item */
 
-	.work-item {
-		margin: 0 0 2em 0;
-	}
+	/* Work Item */
+.work-item {
+    margin: 0 0 2em 0;
+}
 
-		.work-item .image {
-			margin: 0 0 1.5em 0;
-		}
+.work-item .image {
+    margin: 0 0 1.5em 0;
+}
 
-		.work-item h3 {
-			font-size: 1em;
-			margin: 0 0 0.5em 0;
-		}
+.work-item h3 {
+    font-size: 1em;
+    margin: 0 0 0.5em 0;
+}
 
-		.work-item p {
-			font-size: 0.8em;
-			line-height: 1.5em;
-			margin: 0;
-		}
+.work-item p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+/* ✅ Media Query (Placed Correctly) */
+@media screen and (max-width: 768px) {
+    .view-button {
+        display: inline-block !important;  /* Ensure buttons are visible */
+        width: auto; /* Adjust width dynamically */
+        padding: 1em 1.5em; /* Ensure padding is applied */
+        text-align: center;
+        margin: 10px auto; /* Center the button */
+    }
+}
 
 /* Header */
 
@@ -3224,21 +3236,99 @@ input, select, textarea {
 				margin-left: 0;
 				padding-left: 0;
 			}
-	.view-button {
-		display: inline-block;
-		padding: 0.75em 1.5em;
-		margin-top: 1em;
-		background-color: #770000; /* Primary color */
-		color: #fff; /* Text color */
-		text-align: center;
-		text-decoration: none;
-		border-radius: 5px; /* Rounded corners */
-		transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-		}
+.view-button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    margin: 10px auto;
+    background-color: #770000; /* Primary color */
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+	width: auto;
+	border: none;
+	cursor: pointer;
+	min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 	.view-button:hover {
 		background-color: #747474; /* Darker shade on hover */
 		transform: translateY(-2px); /* Slight lift on hover */
 		box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+		}
+	/* ✅ Ensuring Button Works Across All Screens */
+	@media screen and (max-width: 768px) {
+		.view-button {
+			width: auto !important; /* Prevents it from stretching */
+			max-width: 200px; /* Prevents overly wide buttons */
+			text-align: center;
+			padding: 12px 20px;
+			margin: 10px auto; /* Ensures proper centering */
+		}
+	}
+
+@media screen and (min-width: 769px) {
+    .view-button {
+        width: auto; /* Allows it to resize dynamically */
+        padding: 10px 20px;
+    }
+}
+	}
+	nav {
+		display: flex;
+		justify-content: center; /* Centers the nav items horizontally */
+		align-items: center;
+		width: 100%; /* Ensures it spans the full width */
+		background: #F6EEE3;
+		padding: 10px 0; /* Adds spacing above and below */
+	}
+	
+	nav ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		padding: 0;
+		margin: 0 auto; /* Ensures auto-centering */
+		gap: 15px; /* Adds space between buttons */
+	}
+	
+	nav ul {
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	
+	nav ul li a {
+		display: inline-block; /* Makes links behave like buttons */
+		padding: 10px 15px; /* Adjust padding to make it button-like */
+		background: #770000; /* Background color */
+		color: #fff; /* Text color */
+		text-decoration: none;
+		font-weight: bold;
+		border-radius: 5px; /* Rounded edges */
+		transition: background-color 0.3s ease, transform 0.2s ease;
+	}
+	
+	/* Button Hover Effect */
+	nav ul li a:hover {
+		background: #5a0000; /* Darker red for hover */
+		transform: scale(1.05); /* Slightly enlarges button on hover */
+	}
+	
+	/* ✅ Keeps items side by side on mobile */
+	@media screen and (max-width: 768px) {
+		nav ul {
+			flex-wrap: wrap; /* Allows wrapping if needed */
+			justify-content: center; /* Ensures it remains centered */
+		}
+	
+		nav ul li {
+			margin: 5px 0;
 		}
 	}

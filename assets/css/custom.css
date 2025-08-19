@@ -1,0 +1,108 @@
+/* ========= Custom polish for Alejandro Rodriguez portfolio ========= */
+:root{
+    --bg: #f6efe7;
+    --card: #ffffff;
+    --ink: #1f2937;
+    --ink-dim: #4b5563;
+    --brand: #7a1f1a;
+    --brand-ink: #fff;
+    --radius: 16px;
+    --shadow: 0 8px 30px rgba(0,0,0,.08);
+  }
+  
+  /* Base */
+  html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  
+  /* Sidebar header tweaks */
+  #header .image.avatar img{
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,.7);
+  }
+  #header h1{
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  
+  /* Top nav */
+  nav ul { gap: .5rem; display: flex; justify-content: flex-end; }
+  nav a{
+    border-radius: 999px;
+    padding: .6rem 1rem;
+    border: none !important;
+    box-shadow: var(--shadow);
+    background: var(--brand);
+    color: var(--brand-ink) !important;
+    font-weight: 600;
+    letter-spacing: .01em;
+    transition: transform .12s ease, box-shadow .12s ease, opacity .2s;
+  }
+  nav a:hover{ transform: translateY(-2px); opacity: .95; }
+  
+  /* Section headings */
+  #main h2{
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.1rem);
+    margin-bottom: 1.2rem;
+    color: #6b1d16;
+  }
+  
+  /* About paragraph */
+  #about p{
+    max-width: 62ch;
+    color: var(--ink-dim);
+    font-size: 1.02rem;
+  }
+  
+  /* Buttons */
+  .button.primary{
+    background: var(--brand) !important;
+    color: var(--brand-ink) !important;
+    border: none !important;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  .button.primary:hover{ filter: brightness(.95); transform: translateY(-1px); }
+  
+  /* Project cards */
+  .work-item{
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding-bottom: .5rem;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .work-item:hover{ transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.12); }
+  .work-item .image.fit img{
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+  }
+  
+  /* "View" link as button-ish */
+  .view-button{
+    display: inline-block;
+    margin-top: .25rem;
+    padding: .5rem .9rem;
+    border-radius: 10px;
+    background: #1118270f;
+    font-weight: 600;
+  }
+  .view-button:hover{ background: #11182714; }
+  
+  /* Contact block */
+  .contact-block{
+    margin-top: 3rem;
+    padding-top: .5rem;
+  }
+  .contact-block .contact-actions{
+    list-style: none;
+    padding-left: 0;
+    display: flex; flex-wrap: wrap; gap: .6rem;
+  }
+  .contact-block .button{ border-radius: 12px; }
+  
+  /* Footer */
+  #footer .icons a{ color: var(--ink); }
+  #footer .copyright{ color: var(--ink-dim); }
